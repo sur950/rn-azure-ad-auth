@@ -1,6 +1,6 @@
 # rn-azure-ad-auth
 
-[![CircleCI](https://circleci.com/gh/vmurin/rn-azure-ad-auth.svg?style=svg)](https://circleci.com/gh/vmurin/rn-azure-ad-auth)
+[![CircleCI](https://circleci.com/gh/sur950/rn-azure-ad-auth.svg?style=svg)](https://circleci.com/gh/sur950/rn-azure-ad-auth)
 
 React Native library implementing Azure AD OAuth2 API
 
@@ -8,20 +8,14 @@ The library uses the latest __V2.0__ version of the [Azure AD endponts](https://
 `rn-azure-ad-auth` implements authentication flow using `fetch` API and native components.
 The OpenID connect and `autorization_code` grant are implemented.
 
-JS Docs can be accesed under <https://vmurin.github.io/rn-azure-ad-auth/>
+JS Docs can be accesed under <https://vmurin.github.io/react-native-azure-auth/>
 
 ## Installation
 
-Install `rn-azure-ad-auth` using [npm](https://www.npmjs.com)
+Add `rn-azure-ad-auth` dependency in package.json directly
 
-```bash
-npm install rn-azure-ad-auth --save
-```
-
-Or via [yarn](https://yarnpkg.com/) (recommended)
-
-```bash
-yarn add rn-azure-ad-auth
+```js
+"rn-azure-ad-auth": "github:sur950/rn-azure-ad-auth",
 ```
 
 Then you need to link the native modules in `rn-azure-ad-auth` and used AsyncStorage.
@@ -29,7 +23,7 @@ Please check the [link](https://reactnative.dev/docs/linking-libraries-ios).
 
 If you have used library before, it could be needed also to unlink the community version of AsyncStorage too.
 
-**Note:** If you are using [autolinking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) please be aware of caution to unlink the libraries in the autolinking docs. Especially if you are encountered the problem like issue [#98](https://github.com/vmurin/rn-azure-ad-auth/issues/98) 
+**Note:** If you are using [autolinking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) please be aware of caution to unlink the libraries in the autolinking docs. Especially if you are encountered the problem like issue [#98](https://github.com/vmurin/react-native-azure-auth/issues/98) 
 
 
 ### App Registration
@@ -232,7 +226,7 @@ const azureAuth = new AzureAuth({
 
 ### Usage example
 
-You can consult a tiny sample project [rn-azure-ad-auth-sample](https://github.com/vmurin/rn-azure-ad-auth-sample) for usage example
+You can consult a tiny sample project [rn-azure-ad-auth-sample](https://github.com/sur950/rn-azure-ad-auth-sample) for usage example
 
 ## Issue Reporting
 
@@ -240,11 +234,11 @@ If you have found a bug or if you have a feature request, please report them at 
 
 ## Author
 
-[Vladimir Murin](https://github.com/vmurin)
+[Suresh Konakanchi](https://github.com/sur950)
 
 ## Credits
 
-This project was originally inspired by [https://github.com/auth0/react-native-auth0](https://github.com/auth0/react-native-auth0)
+This project was originally inspired by [https://github.com/vmurin/react-native-azure-auth](https://github.com/vmurin/react-native-azure-auth)
 
 ## License
 
