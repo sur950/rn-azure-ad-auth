@@ -105,12 +105,7 @@ UIBackgroundTaskIdentifier aaBackgroundTaskId;
                                                           NSError * _Nullable error) {
                                           if ([[error domain] isEqualToString:ASWebAuthenticationSessionErrorDomain] &&
                                               [error code] == ASWebAuthenticationSessionErrorCodeCanceledLogin) {
-                                              NSLog(@"[GEEK]%@", callbackURL);
-                                            if (self.closeOnLoad) {
-                                                callback(@[error, [NSNull null]]);
-                                            } else {
                                               callback(@[ERROR_CANCELLED, [NSNull null]]);
-                                            }
                                           } else if(error) {
                                               callback(@[error, [NSNull null]]);
                                           } else if(callbackURL) {

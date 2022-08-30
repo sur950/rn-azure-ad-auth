@@ -3010,9 +3010,9 @@ jetifier@^1.6.6:
   resolved "https://registry.yarnpkg.com/jetifier/-/jetifier-1.6.6.tgz#fec8bff76121444c12dc38d2dad6767c421dab68"
   integrity sha512-JNAkmPeB/GS2tCRqUzRPsTOHpGDah7xP18vGJfIjZC+W2sxEHbxgJxetIjIqhjQ3yYbYNEELkM/spKLtwoOSUQ==
 
-"js-base64@github:sur950/js-base64":
+"js-base64@github:vmurin/js-base64":
   version "2.4.3"
-  resolved "https://codeload.github.com/sur950/js-base64/tar.gz/4313088c94a7b624d9eece2b7c66df9f697aa264"
+  resolved "https://codeload.github.com/vmurin/js-base64/tar.gz/4313088c94a7b624d9eece2b7c66df9f697aa264"
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
