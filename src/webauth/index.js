@@ -114,7 +114,7 @@ export default class WebAuth {
 
     
     /**
-   *  Removes Azure session
+   *  Removes Azure session using v2.0
    *
    * @param {Object} options parameters to send
    * @param {Boolean} [options.ephemeralSession=true] whether to use ephemeral session or not
@@ -135,6 +135,31 @@ export default class WebAuth {
         }, options)
 
         const logoutUrl = client.logoutUrl()
+        return agent.openWeb(logoutUrl, parsedOptions.ephemeralSession, parsedOptions.closeOnLoad)
+    }
+    
+    /**
+   *  Removes Azure session using v1.0
+   *
+   * @param {Object} options parameters to send
+   * @param {Boolean} [options.ephemeralSession=true] whether to use ephemeral session or not
+   * @param {Boolean} [options.closeOnLoad=true] close browser window on 'Loaded' event (works only on iOS)
+   * @returns {Promise}
+   *
+   * @memberof WebAuth
+   */
+     clearSessionV1({ephemeralSession = true, closeOnLoad = true} = {}) {
+        const options = { ephemeralSession, closeOnLoad };
+        const { client, agent } = this
+        const parsedOptions = validate({
+            parameters: {
+                ephemeralSession: { required: true },
+                closeOnLoad: { required: true },
+            },
+            validate: true // not declared params are NOT allowed:
+        }, options)
+
+        const logoutUrl = "https://login.microsoftonline.com/common/oauth2/logout"
         return agent.openWeb(logoutUrl, parsedOptions.ephemeralSession, parsedOptions.closeOnLoad)
     }
 }
